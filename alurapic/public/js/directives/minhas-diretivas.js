@@ -18,10 +18,10 @@ angular.module('minhasDiretivas', [])
     var ddo = {};
 //    ddo.transclude = false;
   
-    ddo.restrict = "AE";
+    ddo.restrict = "E";
   
     ddo.scope = {
-      titulo: '@titulo',
+      titulo: '@titulo', // pode ser soh com o @, o angular da um jeito se for igual no template
       url: '@url'
     }
     
