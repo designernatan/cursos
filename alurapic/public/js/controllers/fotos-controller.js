@@ -1,10 +1,15 @@
 angular
   .module('alurapic')
-  .controller('FotosController', function($scope) {
+  .controller('FotosController', function($scope, $http) {
+    $http.get('v1/fotos')
 
-    $scope.foto = {
-      titulo : 'aviao legal'
-      ,url : 'http://lorempixel.com/image_output/transport-q-c-312-269-2.jpg'
-    };
+    .success(function(fotos) {
+      $scope.fotos = fotos;
+    })
+    .error(function(erro) {
+      console.erro('ewwww');
+    });
+  
+
   
   });
